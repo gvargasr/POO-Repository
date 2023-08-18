@@ -3,11 +3,12 @@ package game;
 import player.Carro;
 import player.Player;
 import track.Pista;
+import track.Obstaculo;
 
 public class Juego {
 	private Pista pistaActual;
 	private Carro carroActual;
-	
+	private Obstaculo obstaculoActual;
 	// <visibilidad> <tipo de dato de retorno> <nombre del metodo>([<parameters>]) { }
 	public void seleccionarCarroyPista(Carro pCarroSeleccionado, Pista pPistaDeCarrera) {
 		this.pistaActual = pPistaDeCarrera;
@@ -39,6 +40,7 @@ public class Juego {
 		Pista track1 = new Pista("Costa Rica");
 		Pista track2 = new Pista("Philiphines");
 		
+		Obstaculo gato = new Obstaculo("El gatito");
 		// 1. Juego.seleccionarCarroyPista(Carro, Pista);
 		// 1.1. Carro.asignarPista(Pista);
 		// 2. Juego.start();
@@ -59,7 +61,9 @@ public class Juego {
 		
 		// 5. Carro.left() or Carro.right();		ferrari.moveLeft();
 		ferrari.moveRight();
-
+		
+		gato.chocar();
+		
 		// 6. Juego.evaluarPosicion(Carro, Pista);
 		miGame.evaluarPosicion();
 		
